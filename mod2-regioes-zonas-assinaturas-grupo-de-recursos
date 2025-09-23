@@ -1,0 +1,47 @@
+Módulo 2 foi falado sobre Regioes do Azure, zona de disponibilidade, assinaturas e grupo de recursos:
+
+Regiões no Azure
+As regiões são como cidades onde a Microsoft tem seus prédios de servidores (os famosos datacenters). Cada região é um lugar físico no mundo onde seus dados e sistemas podem ficar hospedados.
+Exemplo:
+Tem uma região em São Paulo (chamada Brazil South)
+Outra na Virgínia (East US)
+E várias espalhadas pela Europa, Ásia, etc.
+Por que isso importa?
+Se você escolhe uma região perto dos seus clientes, o sistema fica mais rápido.
+Algumas leis exigem que os dados fiquem no país (tipo a LGPD).
+Nem todos os serviços estão disponíveis em todas as regiões.
+
+Zonas de Disponibilidade:
+Dentro de uma mesma região, existem zonas — como se fossem prédios diferentes, cada um com sua própria energia, rede e segurança. Se um prédio tiver problema, os outros continuam funcionando.
+Objetivo?
+Se você colocar seu sistema em mais de uma zona, ele aguenta falhas sem cair.
+É ótimo pra quem precisa que o site ou app fique no ar o tempo todo, mesmo se algo der errado.
+
+O que é uma assinatura ?
+A assinatura do Azure é como uma conta de luz. Tudo o que você consome (máquinas virtuais, bancos de dados, redes, etc.) vai gerar uma cobrança que cai nessa conta. Ela serve para:
+Controlar os gastos: cada assinatura tem seu próprio orçamento.
+Separar ambientes ou áreas: você pode ter uma assinatura só para o time de TI, outra para Marketing, ou uma para Produção e outra para Desenvolvimento.
+Aplicar regras e segurança: dá pra configurar quem pode fazer o quê dentro de cada assinatura.
+Usar assinatura como centro de custo é ótimo quando você quer separar bem os gastos por área ou projeto. Mas não dá pra dividir um recurso entre duas assinaturas — ele sempre pertence a uma só.
+
+E o que são os grupos de recursos?
+Dentro da assinatura, você organiza os recursos em grupos, como se fossem pastas. Por exemplo:
+Um grupo pode conter tudo de um sistema: banco de dados, servidor, rede.
+Outro grupo pode ser só para testes.
+Você pode aplicar tags (etiquetas) como CentroDeCusto=Financeiro ou Projeto=AppRH, que ajudam a rastrear os gastos com mais precisão.
+Usar grupos de recursos como centro de custo funciona bem quando você quer detalhar os gastos dentro de uma mesma assinatura. Mas o grupo de recurso não separa a cobrança — tudo ainda cai na mesma conta (assinatura).
+
+O que é possível fazer, e o que não é?
+Dá pra fazer
+Separar orçamentos por assinatura;
+Usar tags para rastrear gastos por projeto;
+Criar alertas de orçamento por assinatura;
+Aplicar políticas de segurança por assinatura.
+
+Não dá pra fazer
+Dividir um recurso entre assinaturas;
+Ter cobrança separada por grupo de recurso;
+Mover todos os tipos de recurso entre assinaturas;
+Usar grupo de recurso como unidade de cobrança.
+
+
